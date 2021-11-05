@@ -115,3 +115,13 @@ fruit." and a price of 0.4 .... we can expect an object to be created that match
 }
 
 ~~~
+
+### Integration
+
+An example integration test we can create for this project is to test the RESTful endpoints.
+
+If we test the DELETE endpoint by sending a request with a method of 'DELETE' and a path of '/product/delete/1' we shoudl expect the response to be:
+
+status code: 204
+status text : No content
+
