@@ -87,3 +87,31 @@ n.b: For these commands anything surrounded by angled braces <> needs to be repl
 --- 
 
 By Claire Potter
+
+...
+
+#Testing
+
+To run tests on this project, use the command.
+
+~~~ bash
+npm test
+~~~
+
+## Example Tests
+
+### Unit
+
+An example unit test we can create for this project is to test the product builder.
+
+If we test the builder and input a name of "Lemon", a description of "A yellow citrus 
+fruit." and a price of 0.4 .... we can expect an object to be created that matches this format.
+
+~~~ javascript
+{
+    name : "Lemon",
+    description : "A yellow citrus fruit.",
+    price : 0.4
+}
+
+~~~
