@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cpapp	
+  labels: 
+    app: cpapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cpapp
+  strategy:
+    rollingUpdate:
+      maxSurge: 10%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      labels:
+        app: cpapp
+    spec:
+      containers:
+      - name: cppappcontainer
+        image: gcr.io/lbg-training/cp-proj-app-image:16
+        ports:
+        - containerPort: 80
